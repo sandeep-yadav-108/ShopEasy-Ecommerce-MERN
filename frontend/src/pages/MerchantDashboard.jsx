@@ -237,7 +237,7 @@ const MerchantDashboard = () => {
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                      {recentSales.slice(0, 5).map((sale) => (
+                      {Array.isArray(recentSales) ? recentSales.slice(0, 5).map((sale) => (
                         <tr key={sale._id}>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             {new Date(sale.createdAt).toLocaleDateString()}
@@ -261,7 +261,7 @@ const MerchantDashboard = () => {
                             </span>
                           </td>
                         </tr>
-                      ))}
+                      )) : null}
                     </tbody>
                   </table>
                 </div>
