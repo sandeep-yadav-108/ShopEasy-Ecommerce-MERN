@@ -6,8 +6,8 @@ const requestLog = new Map();
 const REQUEST_THROTTLE_MS = 1000; // Minimum time between identical requests (1 second)
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://ecom-backend-vert.vercel.app/api/', 
-  timeout: 10000, 
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api', 
+  timeout: 20000, 
   headers: {
     'Content-Type': 'application/json',
   },
