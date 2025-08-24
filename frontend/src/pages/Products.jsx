@@ -7,6 +7,7 @@ import { useCart } from '../contexts/CartContext';
 
 const Products = () => {
   const { user } = useAuth();
+  const { fetchProducts } = useProducts();
   const { 
     products, 
     categories, 
